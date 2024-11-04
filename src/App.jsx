@@ -6,8 +6,11 @@ import Products from './Components/Products'
 import Marquees from './Components/Marquees'
 import Cards from './Components/Cards'
 import Footer from './Components/Footer'
+import LocomotiveScroll from 'locomotive-scroll';
 
 const App = () => {
+    const locomotiveScroll = new LocomotiveScroll();
+
     return (
         <div className='w-full min-h-screen bg-[#0F1215] text-white font-["Satoshi_Variable"]'>
             <Navbar />
