@@ -41,7 +41,7 @@ const Marquees = () => {
 
   return (
     <div className="mt-10 py-10">
-        {images.map((item, index) => <Marquee key={index} imagesurls={item} />)}
+      {images.map((item, index) => <Marquee key={index} direction={index === 0 ? "left" : "right"} imagesurls={item} />)}
     </div>
   );
 };

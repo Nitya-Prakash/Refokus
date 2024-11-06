@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Product from './Product'
+import { motion } from 'framer-motion';
 
 const Products = () => {
     const products = [
@@ -10,9 +11,23 @@ const Products = () => {
         { title: "rainfall", description: "Birds chirped softly in the early morning, welcoming the sunrise as the sky turned shades of pink and orange", live: true, case: true },
     ]
 
+    const [pos, setPos] = useState(0);
+    const mover = (val) => {
+        setPos(val * 16);
+    }
+
     return (
-        <div className='mt-20'>
-            {products.map((val, index) => <Product val={val} key={index} />)}
+        <div className='mt-20 relative'>
+            {products.map((val, index) => <Product val={val} key={index} mover={mover} count={index} />)}
+            <div className='w-full h-full absolute top-0 pointer-events-none'>
+                <motion.div initial={{ y: pos, x: "-50%" }} animate={{ y: pos + 'rem' }} transition={{ ease: [0.76, 0, 0.24, 1], duration: .6 }} className='window w-[24rem] h-[16rem] bg-white absolute left-[45%] overflow-hidden'>
+                    <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration: .5 }} animate={{ y: -pos + 'rem' }} className='w-full h-full bg-sky-950'></motion.div>
+                    <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration: .5 }} animate={{ y: -pos + 'rem' }} className='w-full h-full bg-green-950'></motion.div>
+                    <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration: .5 }} animate={{ y: -pos + 'rem' }} className='w-full h-full bg-red-950'></motion.div>
+                    <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration: .5 }} animate={{ y: -pos + 'rem' }} className='w-full h-full bg-blue-950'></motion.div>
+                    <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration: .5 }} animate={{ y: -pos + 'rem' }} className='w-full h-full bg-yellow-950'></motion.div>
+                </motion.div>
+            </div>
         </div>
     )
 }
