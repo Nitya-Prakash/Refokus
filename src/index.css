@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: 'satoshi';
+    src: url('./Assets/66aa728085dec3390cb7f058_Satoshi-Variable.ttf') format('ttf');
+    font-style: normal;
+}
