@@ -22,19 +22,19 @@ const Products = () => {
             <div className='w-full h-full absolute top-0 pointer-events-none'>
                 <motion.div initial={{ y: pos, x: "-50%" }} animate={{ y: pos + 'rem' }} transition={{ ease: [0.76, 0, 0.24, 1], duration: .6 }} className='window w-[24rem] h-[16rem] absolute left-[45%] overflow-hidden rounded-xl'>
                     <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration: .5 }} animate={{ y: -pos + 'rem' }} className='w-full h-full rounded-xl'>
-                        <video autoPlay muted loop src="/src/Assets/arqitel-43.webm" className='w-full h-full object-cover'></video>
+                        <video autoPlay muted loop src="../Assets/arqitel-43.webm" className='w-full h-full object-cover'></video>
                     </motion.div>
                     <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration: .5 }} animate={{ y: -pos + 'rem' }} className='w-full h-full bg-green-950 rounded-xl'>
-                        <video autoPlay muted loop src="/src/Assets/ttr-43.webm" className='w-full h-full object-cover'></video>
+                        <video autoPlay muted loop src="../Assets/ttr-43.webm" className='w-full h-full object-cover'></video>
                     </motion.div>
                     <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration: .5 }} animate={{ y: -pos + 'rem' }} className='w-full h-full bg-red-950 rounded-xl'>
-                        <video autoPlay muted loop src="/src/Assets/yir2022-43.webm" className='w-full h-full object-cover'></video>
+                        <video autoPlay muted loop src="../Assets/yir2022-43.webm" className='w-full h-full object-cover'></video>
                     </motion.div>
                     <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration: .5 }} animate={{ y: -pos + 'rem' }} className='w-full h-full bg-blue-950 rounded-xl'>
-                        <video autoPlay muted loop src="/src/Assets/yahoo-43.webm" className='w-full h-full object-cover'></video>
+                        <video autoPlay muted loop src="../Assets/yahoo-43.webm" className='w-full h-full object-cover'></video>
                     </motion.div>
                     <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration: .5 }} animate={{ y: -pos + 'rem' }} className='w-full h-full bg-yellow-950 rounded-xl'>
-                        <video autoPlay muted loop src="/src/Assets/rainfall-43.webm" className='w-full h-full object-cover'></video>
+                        <video autoPlay muted loop src="../Assets/rainfall-43.webm" className='w-full h-full object-cover'></video>
                     </motion.div>
                 </motion.div>
             </div>
